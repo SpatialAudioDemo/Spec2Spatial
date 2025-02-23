@@ -52,7 +52,31 @@
         background-position: center;
     }
   </style> -->
+  <style>
+    /* Style to center the content */
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+    }
 
+    .audio-container {
+      margin-top: 10px;
+    }
+
+    /* .audio-player {
+      width: 50%;
+      max-width: 300px;
+    } */
+
+    img {
+      width: 100%;
+      max-width: 500;
+    }
+  </style>
 </head>
 <body>
 
@@ -121,11 +145,121 @@
 <!-- End paper abstract -->
 
 
+
+
+<!-- 2x3 Image and Audio Grid Section -->
+<section class="section">
+  <div class="container">
+    <h1 class="title">Audios and Spectrograms</h1>
+    <div class="columns is-multiline">
+      <!-- Image 1 -->
+      <div class="column is-one-third">
+        <div class="image-container">
+          <div class="has-text-centered">
+            <h3>WaveNet</h3>
+          </div>
+          <img src="static/audio2/Wavenet.png" alt="Spectrogram 1" >
+          <div class="audio-container">
+            <audio controls >
+              <source src="static/audio2/Wavenet.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="column is-one-third">
+        <div class="image-container">
+          <div class="has-text-centered"> 
+            <h3>WarpNet</h3>
+          </div>
+          <img src="static/audio2/warpnet.png" alt="Spectrogram 2" >
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="static/audio2/warpnet.wav" type="audio/wav">
+            </audio>
+          </div> 
+        </div>
+      </div>
+      <!-- Image 3 -->
+      <div class="column is-one-third">
+        <div class="image-container">
+          <div class="has-text-centered">
+            <h3>BinauralGrad</h3>
+          </div>
+          <img src="static/audio2/BinauralGrad.png" alt="Spectrogram 3" >
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="static/audio2/BinauralGrad.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="column is-one-third">
+        <div class="image-container">
+          <div class="has-text-centered">
+            <h3>NFS</h3>
+          </div>
+          <img src="static/audio2/nfs.png" alt="Spectrogram 4" >
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="static/audio2/nfs.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+      <!-- Image 5 -->
+      <div class="column is-one-third">
+        <div class="image-container">
+          <div class="has-text-centered">
+            <h3>Spec2Spatial</h3>
+          </div>
+          <img src="static/audio2/Spec2Spatial.png" alt="Spectrogram 5" >
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="static/audio2/Spec2Spatial.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+      <!-- Image 6 -->
+      <div class="column is-one-third">
+        <div class="image-container">
+          <div class="has-text-centered">
+            <h3>Groundtruth</h3>
+          </div>
+          <img src="static/audio2/groundtruth.png" alt="Spectrogram 6" >
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="static/audio2/groundtruth.wav" type="audio/wav">
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-body">
+        <h2 class="subtitle" style="text-align: left; white-space: pre-wrap; line-height: 1.8;">
+          <strong>Note:</strong> From the spectrograms above, it can be observed that the binaural audio synthesized by our model is closest to the groundtruth. 
+          As stated in the paper, although BinauralGrad shows better Wave-L2 and Phase-L2 metrics, the spectrograms above show that its 
+          synthesized binaural audio has considerable spectral loss, particularly in the high-frequency range, compared to the groundtruth.
+          While NFS has a relatively better spectrogram, it tends to introduce some sibilant sounds when listened to.<br>
+        </h2>
+      </div>
+      
+
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Audio Grid Section -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">Samples from Binaural Speech Dataset</h1>
+      <h1 class="title">Other samples from Binaural Speech Dataset</h1>
       <table>
         <!-- Repeat the row structure for the rest of the 35 audio files -->
 
