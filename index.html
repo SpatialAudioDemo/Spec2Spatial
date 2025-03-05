@@ -107,7 +107,7 @@
         The following video demonstrates the performance of our model in binaural audio synthesis for unseen speakers. Please enjoy it.<br>
         <span style="font-size: 15px; color: #555;">
           <strong>Note:</strong> The silence video is from the dataset in BinauralSpeechSynthesis. 
-          <a href="https://github.com/facebookresearch/BinauralSpeechSynthesis/releases/tag/v1.0" target="_blank" style="font-size: 12px; color: #0066cc;">[1]</a>
+          <a href="https://github.com/facebookresearch/BinauralSpeechSynthesis/releases/tag/v1.0" target="_blank" style="font-size: 12px; color: #0066cc; vertical-align: super;">[1]</a>
         </span>
       </h2>
       <video poster="" id="tree" autoplay controls muted loop height="100%" style="display: block; margin: 0 auto;">
@@ -240,17 +240,17 @@
         </div>
       </div>
 
-      <p style="text-align: left; margin-top: 5px; padding: 2px; border: 2px solid #ff9800; border-radius: 5px; background-color: #fff3e0;width: 31%;">
+      <p style="text-align: left; margin-top: 5px; margin-bottom: 30px; padding: 2px; border: 2px solid #ff9800; border-radius: 5px; background-color: #fff3e0;width: 31%;">
         ⚠️ Please use headphones to listen to these audios.
       </p> 
       
-      <div >
-        <h2 class="subtitle" style="text-align: left; white-space: pre-wrap; line-height: 1.8; ">
+      <div style="font-size: 20px;">
+        
           <strong>Note:</strong> From the spectrograms above, it can be observed that the binaural audio synthesized by our model is closest to the groundtruth. 
           As stated in the paper, although BinauralGrad shows better Wave-L2 and Phase-L2 metrics, the spectrograms above show that its 
           synthesized binaural audio has considerable spectral loss, particularly in the high-frequency range, compared to the groundtruth.
           While NFS has a relatively better spectrogram, it tends to introduce some sibilant sounds when listened to.<br>
-        </h2>
+   
       </div>
       
 
@@ -272,6 +272,7 @@
           <th style="text-align: center; padding-right: 20px;"></th> <!-- 描述列 -->
           <th style="text-align: center;">Mono</th>
           <th style="text-align: center;">Groundtruth</th>
+          <th style="text-align: center;">DSP</th>
           <th style="text-align: center;">WaveNet</th>
           <th style="text-align: center;">WarpNet</th>
           <th style="text-align: center;">NFS</th>
@@ -284,6 +285,7 @@
           <td style="vertical-align: middle; text-align: center; padding-right: 10px;"><strong>Sample1</strong></td> <!-- 描述列 -->
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Mono/subject2_segment_1.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/groundtruth/2_segment_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/DSP/subject2_segment_1.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Wavenet/subject2_segment_1.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Warpnet/subject2_segment_1.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/nfs/2_segment_1.wav" type="audio/wav"></audio></td>
@@ -295,6 +297,7 @@
           <td style="vertical-align: middle; text-align: center; padding-right: 10px;"><strong>Sample2</strong></td> <!-- 描述列 -->
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Mono/subject3_segment_6.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/groundtruth/3_segment_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/DSP/subject3_segment_6.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Wavenet/subject3_segment_6.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Warpnet/subject3_segment_6.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/nfs/3_segment_6.wav" type="audio/wav"></audio></td>
@@ -306,6 +309,7 @@
           <td style="vertical-align: middle; text-align: center; padding-right: 10px;"><strong>Sample3</strong></td> <!-- 描述列 -->
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Mono/subject5_segment_2.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/groundtruth/5_segment_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/DSP/subject5_segment_2.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Wavenet/subject5_segment_2.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Warpnet/subject5_segment_2.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/nfs/5_segment_2.wav" type="audio/wav"></audio></td>
@@ -317,6 +321,7 @@
           <td style="vertical-align: middle; text-align: center; padding-right: 10px;"><strong>Sample4</strong></td> <!-- 描述列 -->
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Mono/subject4_segment_6.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/groundtruth/4_segment_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/DSP/subject4_segment_6.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Wavenet/subject4_segment_6.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Warpnet/subject4_segment_6.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/nfs/4_segment_6.wav" type="audio/wav"></audio></td>
@@ -328,6 +333,7 @@
           <td style="vertical-align: middle; text-align: center; padding-right: 10px;"><strong>Sample5</strong></td> <!-- 描述列 -->
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Mono/subject6_segment_7.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/groundtruth/6_segment_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/DSP/subject6_segment_7.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Wavenet/subject6_segment_7.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Warpnet/subject6_segment_7.wav" type="audio/wav"></audio></td>
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/nfs/6_segment_7.wav" type="audio/wav"></audio></td>
@@ -335,12 +341,25 @@
           <td><audio controls style="width: 190px; margin-top: 10px;"><source src="static/audios/Spec2Spatial/subject6_segment_7.wav" type="audio/wav"></audio></td>
         </tr>
 
-        <!-- Repeat for other rows as needed -->
+        <!-- Repeat for other rows as needed --> 
       </table>
 
-      <p style="text-align: left; margin-top: 5px; padding: 2px; border: 2px solid #ff9800; border-radius: 5px; background-color: #fff3e0;width: 30%;">
+      <p style="text-align: left; margin-top: 5px; margin-bottom: 30px; padding: 2px; border: 2px solid #ff9800; border-radius: 5px; background-color: #fff3e0;width: 30%;">
         ⚠️ Please use headphones to listen to these audios.
-      </p>      
+      </p>    
+      
+      <div style="font-size: 20px;">
+
+          <strong>Note:</strong> To provide readers with a more intuitive comparison, we also present the results of traditional DSP methods. 
+          The HRTF dataset we used was collected by Bill Gardner and Keith Martin from MIT <a href="https://sound.media.mit.edu/resources/KEMAR.html" target="_blank" style="font-size: 12px; color: #0066cc; vertical-align: super;">[2]</a>. 
+          This dataset was recorded using KEMAR at a distance of 1.4 meters. 
+          However, since we do not have detailed information about the specific room environment in which the Binaural Speech Dataset was collected, 
+          the DSP method cannot accurately account for room reverberation. 
+          This is also why we did not include loss calculations for the DSP method in our paper—such calculations would be meaningless, 
+          as the loss values would inevitably be high.<br>
+
+      </div>
+
     </div>
   </div>
 </section>
